@@ -1,6 +1,6 @@
 import requests
 import gpxpy
-from segments import Box,Segment, Point
+from segments import Box,Segment, Point,Segments
 
 
 
@@ -42,4 +42,4 @@ def read_segments_from_file()->list[Segment]:
 
 
 box = Box(bottom_left=Point(lat=0.5739316671, lon=40.5363713), top_right=Point(lat=0.9021482, lon=40.79886535))
-get_segmentss(box)
+get_segments(box)
