@@ -1,10 +1,11 @@
 from typing import TypeAlias
-
+from dataclasses import dataclass
 
 @dataclass
 class Point:
     lat: float
     lon: float
+
 
 
 @dataclass
@@ -13,6 +14,7 @@ class Segment:
     end: Point
 
 
+@dataclass
 class Box:
     bottom_left: Point
     top_right: Point
@@ -38,4 +40,4 @@ def get_segments(box: Box, filename: str) -> Segments:
 
 
 def show_segments(segments: Segments, filename: str) -> None:
-    """Show all segments in a PNG file using staticmap.""
+    """Show all segments in a PNG file using staticmap."""
