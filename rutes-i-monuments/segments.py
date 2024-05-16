@@ -32,9 +32,12 @@ def download_segments(box: Box) -> Segments:
 
     segments: Segments = []
 
+    BOX = f"{box.bottom_left.lat},{box.bottom_left.lon},{box.top_right.lat},{box.top_right.lon}"
     page = 0
-    while True:
-        url = f"https://api.openstreetmap.org/api/0.6/trackpoints?bbox={BOX_EBRE.bottom_left.lat},{BOX_EBRE.bottom_left.lon},{BOX_EBRE.top_right.lat},{BOX_EBRE.top_right.lon}&page={page}"
+    while page < 2:
+        url = (
+            f"https://api.openstreetmap.org/api/0.6/trackpoints?bbox={BOX}&page={page}"
+        )
         response = get(url)
         gpx_content = response.content.decode("utf-8")
         gpx = parse(gpx_content)
@@ -114,6 +117,6 @@ def show_segments(segments: Segments, filename: str) -> None:
 
 
 # BOX_EBRE = Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535))
+# print(download_segments(BOX_EBRE))
 # print(get_segments(BOX_EBRE, "ebre.dat"))
-
 # show_segments(get_segments(BOX_EBRE, "ebre.dat"), "ebre.png")
