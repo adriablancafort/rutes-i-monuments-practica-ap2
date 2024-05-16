@@ -27,7 +27,7 @@ def extract_numbers(text: str) -> list[float]:
     return [float(num) for num in findall(r'\d+\.?\d*', text)]
 
 
-def dms_to_decimal(degrees: int, minutes: int, seconds: float) -> float:
+def dms_to_decimal(degrees: float, minutes: float, seconds: float) -> float:
     """Convert degrees, minutes, and seconds to decimal degrees with 7 digits of precision."""
 
     decimal = degrees + minutes / 60 + seconds / 3600
