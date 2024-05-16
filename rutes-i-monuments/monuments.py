@@ -146,4 +146,4 @@ def get_monuments(filename: str) -> Monuments | None:
     return monuments
 
 
-get_monuments("monuments.dat")
+# get_monuments("monuments.dat")
