@@ -24,7 +24,7 @@ Monuments: TypeAlias = list[Monument]
 def extract_numbers(text: str) -> list[float]:
     """Given a text, returns an array with the list of numbers in it."""
 
-    return [float(num) for num in findall(r'\d+\.?\d*', text)]
+    return [float(num) for num in findall(r"\d+\.?\d*", text)]
 
 
 def dms_to_decimal(degrees: float, minutes: float, seconds: float) -> float:
@@ -112,13 +112,13 @@ def download_monuments() -> Monuments:
         if "post" in loc.text:
             monuments += download_monuments_page(loc.text)
     return monuments
-       
+
 
 def read_monuments_from_file(filename: str) -> Monuments | None:
     """Read the list of monuments from a file."""
 
     try:
-        with open(filename, 'rb') as f:
+        with open(filename, "rb") as f:
             monuments = load(f)
         return monuments
     except:
@@ -128,7 +128,7 @@ def read_monuments_from_file(filename: str) -> Monuments | None:
 def write_monuments_to_file(monuments: Monuments, filename: str) -> None:
     """Write the list of monuments to a file."""
 
-    with open(filename, 'wb') as f:
+    with open(filename, "wb") as f:
         dump(monuments, f)
 
 
@@ -138,7 +138,7 @@ def get_monuments() -> Monuments | None:
     If filename exists, load monuments from the file.
     Otherwise, download monuments and save them to the file.
     """
-    
+
     filename = "monuments.dat"
     monuments = read_monuments_from_file(filename)
     if not monuments:

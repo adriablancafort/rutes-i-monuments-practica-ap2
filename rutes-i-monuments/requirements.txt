@@ -1,1 +1,12 @@
+typing
+dataclasses
+bs4
+requests
+re
+lxml
+
 networkx
+simplekml
+haversine
+gpxpy
+staticmap
