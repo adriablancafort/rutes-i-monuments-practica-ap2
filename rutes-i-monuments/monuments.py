@@ -114,6 +114,13 @@ def download_monuments() -> Monuments:
     return monuments
 
 
+def write_monuments_to_file(monuments: Monuments, filename: str) -> None:
+    """Write the list of monuments to a file."""
+
+    with open(filename, "wb") as f:
+        dump(monuments, f)
+
+
 def read_monuments_from_file(filename: str) -> Monuments | None:
     """Read the list of monuments from a file."""
 
@@ -123,13 +130,6 @@ def read_monuments_from_file(filename: str) -> Monuments | None:
         return monuments
     except:
         return None
-
-
-def write_monuments_to_file(monuments: Monuments, filename: str) -> None:
-    """Write the list of monuments to a file."""
-
-    with open(filename, "wb") as f:
-        dump(monuments, f)
 
 
 def get_monuments() -> Monuments | None:
