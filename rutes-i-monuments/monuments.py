@@ -132,14 +132,13 @@ def read_monuments_from_file(filename: str) -> Monuments | None:
         return None
 
 
-def get_monuments() -> Monuments | None:
+def get_monuments(filename: str) -> Monuments | None:
     """
     Get all monuments in the box.
     If filename exists, load monuments from the file.
     Otherwise, download monuments and save them to the file.
     """
 
-    filename = "monuments.dat"
     monuments = read_monuments_from_file(filename)
     if not monuments:
         monuments = download_monuments()
@@ -147,4 +146,4 @@ def get_monuments() -> Monuments | None:
     return monuments
 
 
-get_monuments()
+get_monuments("monuments.dat")
