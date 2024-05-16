@@ -9,7 +9,13 @@ def make_graph(segments: Segments, clusters: int) -> nx.Graph:
     """Make a graph from the segments."""
 
     # Extract points from segments
-    points = np.array([(point.lat, point.lon) for segment in segments for point in [segment.start, segment.end]])
+    points = np.array(
+        [
+            (point.lat, point.lon)
+            for segment in segments
+            for point in [segment.start, segment.end]
+        ]
+    )
 
     # Fit KMeans model
     kmeans = KMeans(n_clusters=clusters, random_state=0).fit(points)
@@ -46,10 +52,12 @@ def simplify_graph(graph: nx.Graph, epsilon: float) -> nx.Graph:
         if len(list(graph.neighbors(node))) == 2:
             neighbors = list(graph.neighbors(node))
             # Calculate the vector between the node and its neighbors
-            v1 = np.array(graph.nodes[neighbors[0]]['pos']) - \
-                np.array(graph.nodes[node]['pos'])
-            v2 = np.array(graph.nodes[neighbors[1]]['pos']) - \
-                np.array(graph.nodes[node]['pos'])
+            v1 = np.array(graph.nodes[neighbors[0]]["pos"]) - np.array(
+                graph.nodes[node]["pos"]
+            )
+            v2 = np.array(graph.nodes[neighbors[1]]["pos"]) - np.array(
+                graph.nodes[node]["pos"]
+            )
             # Calculate the angle between the vectors
             angle = angle_between(v1, v2)
             # If the angle is close to 180 degrees, remove the node and add an edge between its neighbors
