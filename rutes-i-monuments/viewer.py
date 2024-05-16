@@ -1,8 +1,8 @@
-# from segments import Box, Point, get_segments
-# from graphmaker import make_graph, simplify_graph
 from staticmap import StaticMap, Line
 from simplekml import Kml
 import networkx as nx
+# from segments import Box, Point, get_segments
+# from graphmaker import make_graph, simplify_graph
 
 
 def export_PNG(graph: nx.Graph, filename: str) -> None:
