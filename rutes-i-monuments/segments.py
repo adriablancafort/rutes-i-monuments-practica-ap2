@@ -34,7 +34,7 @@ def download_segments(box: Box) -> Segments:
 
     BOX = f"{box.bottom_left.lat},{box.bottom_left.lon},{box.top_right.lat},{box.top_right.lon}"
     page = 0
-    while page < 2:
+    while True:
         url = (
             f"https://api.openstreetmap.org/api/0.6/trackpoints?bbox={BOX}&page={page}"
         )
