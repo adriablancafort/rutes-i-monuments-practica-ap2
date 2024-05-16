@@ -6,9 +6,10 @@ re
 lxml
 gpxpy
 staticmap
-
-simplekml
+scikit-learn
+scipy
+numpy
 networkx
+simplekml
+
 haversine
-gpxpy
-staticmap
