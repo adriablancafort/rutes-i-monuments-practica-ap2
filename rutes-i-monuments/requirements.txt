@@ -4,6 +4,7 @@ bs4
 requests
 re
 lxml
+gpxpy
 
 networkx
 simplekml
