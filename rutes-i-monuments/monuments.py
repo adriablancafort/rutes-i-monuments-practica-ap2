@@ -2,6 +2,7 @@ from typing import TypeAlias
 from dataclasses import dataclass
 from bs4 import BeautifulSoup
 from requests import get
+from requests.exceptions import ConnectionError, Timeout, ReadTimeout
 from re import findall
 from pickle import dump, load
 
@@ -55,7 +56,19 @@ def calculate_coordinates(text: str) -> Point | None:
 def scrape_monument(url: str) -> Monument | None:
     """Given the url of a monument, returns its title and coordinates."""
 
-    response = get(url)
+    try:
+        response = get(url, timeout=8)
+    except (ConnectionError, Timeout, ReadTimeout):
+        print(f"Request to {url} timed out. Trying again.")
+        try:
+            response = get(url, timeout=8)
+        except (ConnectionError, Timeout, ReadTimeout):
+            print(f"Request to {url} timed out again. Skipping.")
+            return None
+    except Exception as e:
+        print(f"An unexpected error occurred while trying to get {url}: {e}")
+        return None
+
     soup = BeautifulSoup(response.content, "html.parser")
 
     # Find the title of the monument
