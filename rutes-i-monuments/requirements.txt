@@ -5,9 +5,10 @@ requests
 re
 lxml
 gpxpy
+staticmap
 
-networkx
 simplekml
+networkx
 haversine
 gpxpy
 staticmap
