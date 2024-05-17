@@ -3,6 +3,7 @@ from typing import TypeAlias
 from dataclasses import dataclass
 from staticmap import StaticMap, Line
 from simplekml import Kml
+import numpy as np
 import networkx as nx
 from haversine import haversine
 
@@ -21,9 +22,28 @@ class Route:
 Routes: TypeAlias = list[Route]
 
 
+def closest_point(graph: nx.Graph, point: Point) -> Point:
+    """Returns the closest point of the graph to the given point."""
+
+    # Create a list of all node positions
+    node_positions = np.array([graph.nodes[node]['pos'] for node in graph.nodes()])
+
+    # Create a KDTree from the node positions
+    tree = KDTree(node_positions)
+
+    # Query the KDTree for the closest point to the given point
+    distance, index = tree.query(point)
+
+    # Return the corresponding node
+    return list(graph.nodes())[index]
+
+
 # No definitiu. S'ha d'implementar amb haversine
 def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
     """Find the shortest route between the starting point and all the endpoints."""
+
+    # Find the closest endpoint of the graph to the start
+    start = closest_point(graph, start)
 
     # Add haversine distances as edge attributes
     for edge in graph.edges():
@@ -40,6 +60,8 @@ def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
 
     # Find shortest path to each endpoint
     for endpoint in endpoints:
+        # Find the closest point from the graph to the endpoint
+        endpoint = closest_point(graph, endpoint)
         try:
             path = nx.dijkstra_path(graph, start, endpoint, weight='distance')
             routes.append(path)
