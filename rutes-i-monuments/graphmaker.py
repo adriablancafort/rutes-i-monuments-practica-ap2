@@ -3,7 +3,8 @@ import numpy as np
 import networkx as nx
 from sklearn.cluster import KMeans
 from scipy.spatial import KDTree
-
+import networkx as nx
+import math
 
 def make_graph(segments: Segments, clusters: int) -> nx.Graph:
     """Make a graph from the segments."""
@@ -64,7 +65,6 @@ def simplify_graph(graph: nx.Graph, epsilon: float) -> nx.Graph:
             if abs(180 - angle) < epsilon:
                 simplified_graph.remove_node(node)
                 simplified_graph.add_edge(neighbors[0], neighbors[1])
-
     return simplified_graph
 
 

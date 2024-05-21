@@ -17,6 +17,7 @@ class Point:
 # S'ha de decidir com ha de ser el dataclass Route per poder dibuixar-lo bé
 @dataclass
 class Route:
+    list[Point]
 
 
 Routes: TypeAlias = list[Route]
@@ -50,25 +51,20 @@ def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
         start_node = graph.nodes[edge[0]]['pos']
         end_node = graph.nodes[edge[1]]['pos']
         distance = haversine(start_node, end_node)
-        graph.edges[edge]['distance'] = distance
+        graph.edges[edge]['weight'] = distance
 
-    # Convert Monuments to list of nodes
-    endpoints = list(endpoints)
 
     # Initialize routes list
-    routes: Routes = []
+    _, paths = nx.single_source_dijkstra(graph, source=start)
+    routes_returner: Routes = []
+    for monu in endpoints:
+        loc :Point = monu.location
+        end_node = closest_point(graph,loc)
+        routes_returner.append(paths[end_node])
 
-    # Find shortest path to each endpoint
-    for endpoint in endpoints:
-        # Find the closest point from the graph to the endpoint
-        endpoint = closest_point(graph, endpoint)
-        try:
-            path = nx.dijkstra_path(graph, start, endpoint, weight='distance')
-            routes.append(path)
-        except nx.NetworkXNoPath:
-            print(f"No path found from {start} to {endpoint}")
+    return routes_returner
 
-    return routes
+
 
 
 # No definitiu
