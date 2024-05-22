@@ -28,7 +28,7 @@ def make_graph(segments: Segments, clusters: int) -> nx.Graph:
 
     # Add nodes to the graph
     for i, centroid in enumerate(kmeans.cluster_centers_):
-        G.add_node(i, pos=centroid)
+        G.add_node(i, pos=centroid,color="blue")
 
     # Add edges to the graph
     for segment in segments:

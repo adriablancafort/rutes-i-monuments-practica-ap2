@@ -66,7 +66,14 @@ def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
 
     return routes_returner
 
-
+def color_routes(graph: nx.Graph, routes:Routes) -> None:
+    for route in routes:
+        for i in range(len(route) - 1):
+            node1, node2 = route[i], route[i + 1]
+            graph[node1]['color'] = 'yellow'
+            graph[node2]['color'] = 'yellow'
+            graph[node1][node2]['color'] = 'red'
+            graph[node2][node1]['color'] = 'red'
 
 
 def cleaner_printer(graph: nx.Graph) -> None:
