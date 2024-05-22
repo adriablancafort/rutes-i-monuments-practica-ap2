@@ -6,6 +6,7 @@ from simplekml import Kml
 import numpy as np
 import networkx as nx
 from haversine import haversine
+from scipy.spatial import KDTree
 
 
 @dataclass
@@ -23,7 +24,7 @@ class Route:
 Routes: TypeAlias = list[Route]
 
 
-def closest_point(graph: nx.Graph, point: Point) -> Point:
+def closest_point(graph: nx.Graph, point: Point) -> int:
     """Returns the closest point of the graph to the given point."""
 
     # Create a list of all node positions
@@ -42,7 +43,6 @@ def closest_point(graph: nx.Graph, point: Point) -> Point:
 # No definitiu. S'ha d'implementar amb haversine
 def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
     """Find the shortest route between the starting point and all the endpoints."""
-
     # Find the closest endpoint of the graph to the start
     start = closest_point(graph, start)
 
@@ -52,9 +52,8 @@ def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
         end_node = graph.nodes[edge[1]]['pos']
         distance = haversine(start_node, end_node)
         graph.edges[edge]['weight'] = distance
-
-
     # Initialize routes list
+
     _, paths = nx.single_source_dijkstra(graph, source=start)
     routes_returner: Routes = []
     for monu in endpoints:
@@ -99,3 +98,28 @@ def export_KML(routes: Routes, filename: str) -> None:
             kml.newlinestring( coords=[(start_node[1], start_node[0]), (end_node[1], end_node[0])])
 
     kml.save(filename)
+
+
+"""
+graph = nx.Graph()
+centr = [(1,2),(2,5),(4,2),(3,2),(1,5)]
+for i, centroid in enumerate(centr):
+    graph.add_node(i, pos=centroid)
+
+
+graph.add_edge(0,1)
+graph.add_edge(0,2)
+graph.add_edge(2,3)
+graph.add_edge(3,4)
+graph.add_edge(4,1)
+graph.add_edge(2,1)
+
+for edge in graph.edges():
+    start_node = graph.nodes[edge[0]]['pos']
+    end_node = graph.nodes[edge[1]]['pos']
+    distance = abs(end_node[0]-start_node[0]) + abs(end_node[1]-start_node[1])
+    graph.edges[edge]['weight'] = distance
+
+
+print(find_routes(graph,0,[4]))
+"""

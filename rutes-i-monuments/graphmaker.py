@@ -4,7 +4,6 @@ import networkx as nx
 from sklearn.cluster import KMeans
 from scipy.spatial import KDTree
 import networkx as nx
-import math
 
 def make_graph(segments: Segments, clusters: int) -> nx.Graph:
     """Make a graph from the segments."""
