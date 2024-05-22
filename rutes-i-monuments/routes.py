@@ -7,7 +7,6 @@ import numpy as np
 import networkx as nx
 from haversine import haversine
 from scipy.spatial import KDTree
-
 from segments import Box, Point, get_segments
 from graphmaker import make_graph, simplify_graph
 
