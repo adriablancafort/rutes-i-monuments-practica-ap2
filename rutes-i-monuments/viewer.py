@@ -40,6 +40,15 @@ def export_KML(graph: nx.Graph, filename: str) -> None:
     kml.save(filename)
 
 
+
+def cleaner_printer(graph: nx.Graph) -> None:
+    edges = list(graph.edges)
+    m = len(edges)
+    for i in range(m-1,0,-1):
+        graph.remove_edge(edges[i][0],edges[i][1])
+        name_plot = f"Edge number:{i} removed"
+        export_KML(graph,name_plot)
+
 BOX_EBRE = Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535))
 graph = simplify_graph(make_graph(get_segments(BOX_EBRE, "ebre.dat"), 100), 5)
 export_KML(graph, "ebre_simplificat.kml")

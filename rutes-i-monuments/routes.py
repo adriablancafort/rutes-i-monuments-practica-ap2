@@ -76,17 +76,11 @@ def color_routes(graph: nx.Graph, routes:Routes) -> None:
             graph[node2][node1]['color'] = 'red'
 
 
-def cleaner_printer(graph: nx.Graph) -> None:
-    edges = list(graph.edges)
-    m = len(edges)
-    for i in range(m-1,0,-1):
-        graph.remove_edge(edges[i][0],edges[i][1])
-        name_plot = f"Edge number:{i} removed"
         #plot the graph and see if it is the edge that I want to delete
-    
+"""
 # No definitiu
 def export_PNG(routes: Routes, filename: str) -> None:
-    """Export the routes to a PNG file using staticmap."""
+    #Export the routes to a PNG file using staticmap.
 
     map = StaticMap(800, 800)
 
@@ -104,7 +98,7 @@ def export_PNG(routes: Routes, filename: str) -> None:
 
 # No definitiu
 def export_KML(routes: Routes, filename: str) -> None:
-    """Export the routes to a KML file."""
+    #Export the routes to a KML file.
 
     kml = Kml()
 
@@ -121,7 +115,7 @@ def export_KML(routes: Routes, filename: str) -> None:
 BOX_EBRE = Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535))
 graph = simplify_graph(make_graph(get_segments(BOX_EBRE, "ebre.dat"), 100), 5)
 export_KML(graph, "ebre_simplificat.kml")
-
+"""
 
 """
 graph = nx.Graph()
