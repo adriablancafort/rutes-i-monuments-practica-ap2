@@ -39,8 +39,6 @@ def export_KML(graph: nx.Graph, filename: str) -> None:
 
     kml.save(filename)
 
-
-
 def cleaner_printer(graph: nx.Graph) -> None:
     edges = list(graph.edges)
     m = len(edges)

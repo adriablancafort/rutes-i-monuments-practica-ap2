@@ -63,7 +63,7 @@ def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
         loc :Point = monu.location
         end_node = closest_point(graph,loc)
         routes_returner.append(paths[end_node])
-
+    ##return points change
     return routes_returner
 
 def color_routes(graph: nx.Graph, routes:Routes) -> None:
@@ -75,47 +75,6 @@ def color_routes(graph: nx.Graph, routes:Routes) -> None:
             graph[node1][node2]['color'] = 'red'
             graph[node2][node1]['color'] = 'red'
 
-
-        #plot the graph and see if it is the edge that I want to delete
-"""
-# No definitiu
-def export_PNG(routes: Routes, filename: str) -> None:
-    #Export the routes to a PNG file using staticmap.
-
-    map = StaticMap(800, 800)
-
-    for route in routes:
-        for i in range(len(route) - 1):
-            start_node = route[i]['pos']
-            end_node = route[i + 1]['pos']
-
-            line = Line([(start_node[1], start_node[0]), (end_node[1], end_node[0])], 'red', 3)
-            map.add_line(line)
-
-    image = map.render()
-    image.save(filename)
-
-
-# No definitiu
-def export_KML(routes: Routes, filename: str) -> None:
-    #Export the routes to a KML file.
-
-    kml = Kml()
-
-    for route in routes:
-        for i in range(len(route) - 1):
-            start_node = route[i]['pos']
-            end_node = route[i + 1]['pos']
-
-            kml.newlinestring( coords=[(start_node[1], start_node[0]), (end_node[1], end_node[0])])
-
-    kml.save(filename)
-
-
-BOX_EBRE = Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535))
-graph = simplify_graph(make_graph(get_segments(BOX_EBRE, "ebre.dat"), 100), 5)
-export_KML(graph, "ebre_simplificat.kml")
-"""
 
 """
 graph = nx.Graph()
