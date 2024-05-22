@@ -54,6 +54,7 @@ def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
         end_node = graph.nodes[edge[1]]['pos']
         distance = haversine(start_node, end_node)
         graph.edges[edge]['weight'] = distance
+        graph.edges[edge]['col'] = "black"
     # Initialize routes list
 
     _, paths = nx.single_source_dijkstra(graph, source=start)
@@ -68,6 +69,14 @@ def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
 
 
 
+def cleaner_printer(graph: nx.Graph) -> None:
+    edges = list(graph.edges)
+    m = len(edges)
+    for i in range(m-1,0,-1):
+        graph.remove_edge(edges[i][0],edges[i][1])
+        name_plot = f"Edge number:{i} removed"
+        #plot the graph and see if it is the edge that I want to delete
+    
 # No definitiu
 def export_PNG(routes: Routes, filename: str) -> None:
     """Export the routes to a PNG file using staticmap."""

@@ -5,6 +5,7 @@ from segments import Box, Point, get_segments
 from graphmaker import make_graph, simplify_graph
 
 
+
 def export_PNG(graph: nx.Graph, filename: str) -> None:
     """Export the graph to a PNG file using staticmap."""
 
