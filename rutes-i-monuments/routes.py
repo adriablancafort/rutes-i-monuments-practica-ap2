@@ -1,4 +1,4 @@
-from monuments import Monuments
+from monuments import Monuments, Monument
 from typing import TypeAlias
 from dataclasses import dataclass
 from staticmap import StaticMap, Line
@@ -20,7 +20,8 @@ class Point:
 # S'ha de decidir com ha de ser el dataclass Route per poder dibuixar-lo bé
 @dataclass
 class Route:
-    list[Point]
+    name: str
+    path: list[Point]
 
 
 Routes: TypeAlias = list[Route]
@@ -30,13 +31,12 @@ def closest_point(graph: nx.Graph, point: Point) -> int:
     """Returns the closest point of the graph to the given point."""
 
     # Create a list of all node positions
-    node_positions = np.array([graph.nodes[node]['pos'] for node in graph.nodes()])
-
+    node_positions:list[tuple[int,int]] = np.array([graph.nodes[node]['pos'] for node in graph.nodes()])
+    #print(node_positions)
     # Create a KDTree from the node positions
     tree = KDTree(node_positions)
-
     # Query the KDTree for the closest point to the given point
-    distance, index = tree.query(point)
+    distance, index = tree.query([point.lat,point.lat])
 
     # Return the corresponding node
     return list(graph.nodes())[index]
@@ -62,8 +62,11 @@ def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
     for monu in endpoints:
         loc :Point = monu.location
         end_node = closest_point(graph,loc)
-        routes_returner.append(paths[end_node])
-    ##return points change
+        list_of_nodes:Route = Route(monu.name,[Point(graph.nodes[item]['pos'][0],graph.nodes[item]['pos'][1]) for item in paths[end_node]])
+        for item in paths[end_node]:
+            graph.nodes[item]['color'] = 'yellow'
+        routes_returner.append(list_of_nodes)
+        
     return routes_returner
 
 def color_routes(graph: nx.Graph, routes:Routes) -> None:
@@ -76,19 +79,18 @@ def color_routes(graph: nx.Graph, routes:Routes) -> None:
             graph[node2][node1]['color'] = 'red'
 
 
-"""
 graph = nx.Graph()
 centr = [(1,2),(2,5),(4,2),(3,2),(1,5)]
 for i, centroid in enumerate(centr):
-    graph.add_node(i, pos=centroid)
+    graph.add_node(i, pos=centroid,col="black")
 
 
-graph.add_edge(0,1)
-graph.add_edge(0,2)
-graph.add_edge(2,3)
-graph.add_edge(3,4)
-graph.add_edge(4,1)
-graph.add_edge(2,1)
+graph.add_edge(0,1,col="blue",weight = 0)
+graph.add_edge(0,2,col="blue",weight = 0)
+graph.add_edge(2,3,col="blue",weight = 0)
+graph.add_edge(3,4,col="blue",weight = 0)
+graph.add_edge(4,1,col="blue",weight = 0)
+graph.add_edge(2,1,col="blue",weight = 0)
 
 for edge in graph.edges():
     start_node = graph.nodes[edge[0]]['pos']
@@ -97,5 +99,5 @@ for edge in graph.edges():
     graph.edges[edge]['weight'] = distance
 
 
-print(find_routes(graph,0,[4]))
-"""
+print(find_routes(graph,Point(1,2),[Monument("hla",Point(3,2)),Monument("hla",Point(4,1))]))
+
