@@ -5,6 +5,7 @@ from sklearn.cluster import KMeans
 from scipy.spatial import KDTree
 import networkx as nx
 
+
 def make_graph(segments: Segments, clusters: int) -> nx.Graph:
     """Make a graph from the segments."""
 
@@ -28,7 +29,7 @@ def make_graph(segments: Segments, clusters: int) -> nx.Graph:
 
     # Add nodes to the graph
     for i, centroid in enumerate(kmeans.cluster_centers_):
-        G.add_node(i, pos=centroid,color="blue")
+        G.add_node(i, pos=centroid, color="blue")
 
     # Add edges to the graph
     for segment in segments:
