@@ -1,4 +1,4 @@
-from typing import TypeAlias
+from typing import TypeAlias, Optional
 from dataclasses import dataclass
 from requests import get
 from gpxpy import parse
@@ -71,14 +71,15 @@ def write_segments_to_file(segments: Segments, filename: str) -> None:
         dump(segments, f)
 
 
-def read_segments_from_file(filename: str) -> Segments | None:
+def read_segments_from_file(filename: str) -> Optional[Segments]:
     """Read the list of segments from a file."""
 
     try:
         with open(filename, "rb") as f:
-            segments = load(f)
-        return segments
-    except:
+            monuments = load(f)
+        return monuments
+    except FileNotFoundError:
+        print(f"File {filename} not found.")
         return None
 
 
@@ -114,9 +115,3 @@ def show_segments(segments: Segments, filename: str) -> None:
 
     image = map.render()
     image.save(filename)
-
-
-# BOX_EBRE = Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535))
-# print(download_segments(BOX_EBRE))
-# print(get_segments(BOX_EBRE, "ebre.dat"))
-# show_segments(get_segments(BOX_EBRE, "ebre.dat"), "ebre.png")
