@@ -19,6 +19,12 @@ class Monument:
     location: Point
 
 
+@dataclass
+class Box:
+    bottom_left: Point
+    top_right: Point
+
+
 Monuments: TypeAlias = list[Monument]
 
 
@@ -159,3 +165,16 @@ def get_monuments(filename: str) -> Optional[Monuments]:
         monuments = download_monuments()
         write_monuments_to_file(monuments, filename)
     return monuments
+
+
+def filter_monuments(monuments: Monuments, box: Box) -> Optional[Monuments]:
+    """Filter the monuments and return the ones inside the box."""
+
+    # Filter the monuments
+    filtered_monuments = [
+        monument
+        for monument in monuments
+        if box.bottom_left.lat <= monument.location.lon <= box.top_right.lat
+        and box.bottom_left.lon <= monument.location.lat <= box.top_right.lon
+    ]
+    return filtered_monuments
