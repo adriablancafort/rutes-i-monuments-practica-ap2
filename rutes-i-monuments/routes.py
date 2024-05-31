@@ -53,7 +53,7 @@ def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
         start_node = graph.nodes[edge[0]]['pos']
         end_node = graph.nodes[edge[1]]['pos']
         distance = haversine(start_node, end_node)
-        graph.edges[edge]['weight'] = distance
+        graph.edges[edge]['weight'] = distance/1000
         graph.edges[edge]['col'] = "black"
     # Initialize routes list
 

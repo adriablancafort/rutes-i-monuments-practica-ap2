@@ -1,9 +1,9 @@
 """
 Llegeix les entrades, pregunta què fer i crida les funcions adequades
 """
-"""
+
 from segments import Box, Point
-#BOX_EBRE = Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535))
+BOX_EBRE = Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535))
 
 
 # Segments
@@ -14,7 +14,7 @@ from segments import Segment, get_segments, show_segments
 BOX_EBRE = Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535))
 
 #print(get_segments(BOX_EBRE, "ebre.dat"))
-show_segments(get_segments(BOX_EBRE, "ebre.dat"), "ebre_test.png")
+show_segments(get_segments(BOX_EBRE, "../ebre_filtrat.dat"), "ebre_test_filtrat.png")
 
 
 # Monuments
@@ -22,10 +22,10 @@ show_segments(get_segments(BOX_EBRE, "ebre.dat"), "ebre_test.png")
 ## Per poder llegir monuments.dat és necessari importar els tipus Monumen i Point
 from monuments import get_monuments, Monument, Point
 
-print(get_monuments("monuments.dat"))
+#print(get_monuments("monuments.dat"))
 
 # Graphmaker
-
+"""
 from graphmaker import make_graph, simplify_graph
 
 from segments import Segment, get_segments # temporal
@@ -54,5 +54,4 @@ export_KML(graph_simplificat, "ebre_graph_simplificat.kml")
 # readme
 
 # Routes
-
 """

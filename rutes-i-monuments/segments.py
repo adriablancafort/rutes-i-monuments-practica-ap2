@@ -4,6 +4,7 @@ from requests import get
 from gpxpy import parse
 from pickle import dump, load
 from staticmap import StaticMap, Line
+from haversine import haversine
 
 
 @dataclass
@@ -25,7 +26,19 @@ class Box:
 
 
 Segments: TypeAlias = list[Segment]
-
+def validator(p1:any, p2:any)->bool:
+    max_delta:float = 500
+    epsilon: float = 0.000001
+    dist:float = haversine((p1.latitude, p1.longitude),(p2.latitude, p2.longitude))
+    delta = p2.time - p1.time
+    time_delta:float = delta.total_seconds()
+    if(time_delta> 15):
+        return False
+    if(dist >max_delta):
+        return False
+    if(time_delta< epsilon):
+        return False
+    return True
 
 def download_segments(box: Box) -> Segments:
     """Download all segments in the box."""
@@ -35,6 +48,7 @@ def download_segments(box: Box) -> Segments:
     BOX = f"{box.bottom_left.lat},{box.bottom_left.lon},{box.top_right.lat},{box.top_right.lon}"
     page = 0
     while True:
+        print("hola")
         url = (
             f"https://api.openstreetmap.org/api/0.6/trackpoints?bbox={BOX}&page={page}"
         )
@@ -44,7 +58,6 @@ def download_segments(box: Box) -> Segments:
 
         if len(gpx.tracks) == 0:
             break
-
         for track in gpx.tracks:
             for segment in track.segments:
                 if all(point.time is not None for point in segment.points):
@@ -53,12 +66,17 @@ def download_segments(box: Box) -> Segments:
                     for i in range(len(segment.points) - 1):
                         # Add segments of consecutive points
                         p1, p2 = segment.points[i], segment.points[i + 1]
-                        segments.append(
-                            Segment(
-                                Point(p1.latitude, p1.longitude),
-                                Point(p2.latitude, p2.longitude),
+                        ##eliminate if it does not do correct stuff
+                        if(validator(p1,p2)):
+                            segments.append(
+                                Segment(
+                                    Point(p1.latitude, p1.longitude),
+                                    Point(p2.latitude, p2.longitude),
+
+                                )
                             )
-                        )
+                        else:
+                            print("rejected")
         page += 1
 
     return segments
@@ -117,4 +135,4 @@ def show_segments(segments: Segments, filename: str) -> None:
     image.save(filename)
 
 
-print(get_segments(Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535)), "ebre.dat"))
+#print(get_segments(Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535)), "../ebre_filtrat.dat"))
