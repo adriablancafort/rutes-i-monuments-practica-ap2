@@ -115,3 +115,6 @@ def show_segments(segments: Segments, filename: str) -> None:
 
     image = map.render()
     image.save(filename)
+
+
+print(get_segments(Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535)), "ebre.dat"))
