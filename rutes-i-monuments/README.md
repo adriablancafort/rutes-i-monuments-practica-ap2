@@ -64,7 +64,7 @@ Per trobar el camí més òptim, trobem el punt més proper al senderista i el p
 
 ## Esquelet del projecte
 
-# DataClasses
+## DataClasses
 Per organitzar aquest projecte, hem creat vàries dataclasses, entre elles:
 
 **Representa un punt al mapa**
@@ -131,9 +131,12 @@ El mòdul main és l'encarregat de gestionar tota la feina dels altres mòduls e
 
 Com a exemple hem agafat la quadrícula de l'ebre. Un cop corregut l'algorísme de filtrat de dades optenim el graph següent:
 ![Graph filtrat sobre l'ebre](../ebre_segments_filtrat.png)
+Sense filtrar les dades hi havia camins que sobrepassaven aigua i rectes de punta a punta de la imatge. Es pot veure clarament a la imatge proporcionada que totes els camins disposibles són raonables i cap passa per llocs que serien inaccesibles per un persona normal. Això vol dir que el procés de neteja de dades està ben fet.
+
 Seguidament, usem l'algorísme de simplificació del graph mitjançant clústers i angles, obtenint el següent mapejat d'informació:
 ![graph simplificat per clústering](../ebre_graph_simplificat_filtrat.png)
-Com podem veure el graph original
+
+Podem veure a les imatges que el graph simplificat és molt millor que el graph original ja que dona més o menys la mateixa informació mentre que gasta molta menys memòria i és molt més fàcil de treballar amb ell, donant a trobada de rutes molt més ràpidament.
 ## Fonts d'informació
 
 - [Lliçons de fitxers en Python](https://lliçons.jutge.org/python/fitxers-i-formats.html)

@@ -55,7 +55,12 @@ def nearest_node(graph: nx.Graph, point: Point) -> Point:
 
 
 def astar_search(graph: nx.Graph, start: Point, end: Point) -> Segments:
-    """Find the shortest path between two points using the A* algorithm."""
+    """Find the shortest path between two points using the A* algorithm.
+    As parameters give:
+        - The graph
+        - Starting point
+        - Ending point
+    """
 
     g: dict[Point, float] = dict()    # Distance to the start point
     f: dict[Point, float] = dict()    # Distance start-end visiting that point
