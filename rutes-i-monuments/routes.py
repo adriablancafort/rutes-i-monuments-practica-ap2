@@ -1,14 +1,11 @@
-from monuments import Monuments, Monument
-from typing import TypeAlias
 from dataclasses import dataclass
-from staticmap import StaticMap, Line
-from simplekml import Kml
-import numpy as np
-import networkx as nx
+from staticmap import StaticMap, CircleMarker, Line
 from haversine import haversine
+from typing import Callable, Any, TypeAlias
+import networkx as nx
 from scipy.spatial import KDTree
-from segments import Box, Point, get_segments
-from graphmaker import make_graph, simplify_graph
+import simplekml
+import heapq
 
 
 @dataclass
@@ -16,88 +13,159 @@ class Point:
     lat: float
     lon: float
 
+    def __hash__(self):
+        return hash((self.lon, self.lat))
 
-# S'ha de decidir com ha de ser el dataclass Route per poder dibuixar-lo bé
+
 @dataclass
-class Route:
+class Segment:
+    start: Point
+    end: Point
+
+
+Segments: TypeAlias = list[Segment]
+
+
+@dataclass
+class Monument:
     name: str
-    path: list[Point]
+    location: Point
+
+    def __hash__(self):
+        return hash((self.name, self.location))
 
 
-Routes: TypeAlias = list[Route]
+Monuments: TypeAlias = list[Monument]
 
 
-def closest_point(graph: nx.Graph, point: Point) -> int:
-    """Returns the closest point of the graph to the given point."""
-
-    # Create a list of all node positions
-    node_positions:list[tuple[int,int]] = np.array([graph.nodes[node]['pos'] for node in graph.nodes()])
-    #print(node_positions)
-    # Create a KDTree from the node positions
-    tree = KDTree(node_positions)
-    # Query the KDTree for the closest point to the given point
-    distance, index = tree.query([point.lat,point.lat])
-
-    # Return the corresponding node
-    return list(graph.nodes())[index]
+@dataclass
+class Routes:
+    start: Point
+    edges: dict[Monument, Segments]
 
 
-# No definitiu. S'ha d'implementar amb haversine
+def nearest_node(graph: nx.Graph, point: Point) -> Point:
+    """Returns the closest Point of the graph to another given point."""
+
+    nodes = list(graph.nodes(data=True))
+    tree = KDTree([data['pos'] for _, data in nodes])
+    closest_node_index = tree.query([point.lat, point.lon])[1]
+    closest_node_pos = nodes[closest_node_index][1]['pos']
+    return Point(closest_node_pos[0], closest_node_pos[1])
+
+
+def astar_search(graph: nx.Graph, start: Point, end: Point) -> Segments:
+    """Find the shortest path between two points using the A* algorithm."""
+
+    g: dict[Point, float] = dict()    # Distance to the start point
+    f: dict[Point, float] = dict()    # Distance start-end visiting that point
+    pred: dict[Point, Point] = dict()  # Predecesor of a point
+
+    g[start] = 0
+    f[start] = haversine((start.lat, start.lon), (end.lat, end.lon))
+    Q: list[tuple[float, Point]] = []
+    heapq.heappush(Q, (f[start], start))
+
+    while Q:
+        f_u, u = heapq.heappop(Q)
+        if u == end:
+            break
+        # Check that it is the most updated tuple of that node
+        if f_u != f[u]:
+            continue
+        for v in graph.neighbors(u):  # type: ignore
+            cost = haversine((u.lat, u.lon), (v.lat, v.lon))
+            if v not in g or g[v] > g[u] + cost:
+                g[v] = g[u] + cost
+                f[v] = g[v] + haversine((v.lat, v.lon), (end.lat, end.lon))
+                pred[v] = u
+                heapq.heappush(Q, (f[v], v))
+
+    if end not in pred:
+        return []
+    segments: Segments = []
+    current = end
+    while current != start:
+        segments.append(Segment(current, pred[current]))
+        current = pred[current]
+
+    # Segments are in inverse order, but the is no direction in this graph
+    return segments
+
+
 def find_routes(graph: nx.Graph, start: Point, endpoints: Monuments) -> Routes:
-    """Find the shortest route between the starting point and all the endpoints."""
-    # Find the closest endpoint of the graph to the start
-    start = closest_point(graph, start)
+    """Find the shortest route between the starting point and all the
+    endpoints. Precondition: The monuments and start point will be inside
+    the boundaries of the graph"""
 
-    # Add haversine distances as edge attributes
-    for edge in graph.edges():
-        start_node = graph.nodes[edge[0]]['pos']
-        end_node = graph.nodes[edge[1]]['pos']
-        distance = haversine(start_node, end_node)
-        graph.edges[edge]['weight'] = distance/1000
-        graph.edges[edge]['col'] = "black"
-    # Initialize routes list
+    start_point = nearest_node(graph, start)
 
-    _, paths = nx.single_source_dijkstra(graph, source=start)
-    routes_returner: Routes = []
-    for monu in endpoints:
-        loc :Point = monu.location
-        end_node = closest_point(graph,loc)
-        list_of_nodes:Route = Route(monu.name,[Point(graph.nodes[item]['pos'][0],graph.nodes[item]['pos'][1]) for item in paths[end_node]])
-        for item in paths[end_node]:
-            graph.nodes[item]['color'] = 'yellow'
-        routes_returner.append(list_of_nodes)
-        
-    return routes_returner
+    # Add the start point to the graph
+    if start_point not in graph:
+        graph.add_node(start_point, pos=(start_point.lat, start_point.lon))
 
-def color_routes(graph: nx.Graph, routes:Routes) -> None:
-    for route in routes:
-        for i in range(len(route) - 1):
-            node1, node2 = route[i], route[i + 1]
-            graph[node1]['color'] = 'yellow'
-            graph[node2]['color'] = 'yellow'
-            graph[node1][node2]['color'] = 'red'
-            graph[node2][node1]['color'] = 'red'
+    print("Start point:", start_point)
+
+    routes: Routes = Routes(start_point, dict())
+
+    for monument in endpoints:
+        print("calculating endpoint of", monument.name, "at", monument.location)
+
+        end_point = nearest_node(graph, monument.location)
+        print(
+            f"End point for {monument.name}: {end_point}, Location {monument.location}")
+
+        route = astar_search(graph, start_point, end_point)
+        if route:
+            routes.edges[monument] = route
+        else:
+            print(
+                f"There is not a connected path from {start_point} to {monument.name}")
+
+    return routes
 
 
-graph = nx.Graph()
-centr = [(1,2),(2,5),(4,2),(3,2),(1,5)]
-for i, centroid in enumerate(centr):
-    graph.add_node(i, pos=centroid,col="black")
+def routes_PNG(routes: Routes, filename: str) -> None:
+    """Export the graph to a PNG file using staticmap."""
+
+    graph = StaticMap(800, 800)
+    marker = CircleMarker((routes.start.lon, routes.start.lat), "yellow", 10)
+    graph.add_marker(marker)
+    for segments in routes.edges.values():
+        # The monument node is the first point of the first segment
+        marker = CircleMarker(
+            (segments[0].start.lon, segments[0].start.lat), "blue", 10
+        )
+        graph.add_marker(marker)
+
+        for segment in segments:
+            start_point = (segment.start.lon, segment.start.lat)
+            end_point = (segment.end.lon, segment.end.lat)
+            line = Line([start_point, end_point], "black", 2)
+            graph.add_line(line)
+
+    image = graph.render()
+    image.save(filename)
 
 
-graph.add_edge(0,1,col="blue",weight = 0)
-graph.add_edge(0,2,col="blue",weight = 0)
-graph.add_edge(2,3,col="blue",weight = 0)
-graph.add_edge(3,4,col="blue",weight = 0)
-graph.add_edge(4,1,col="blue",weight = 0)
-graph.add_edge(2,1,col="blue",weight = 0)
+def routes_KML(groutes: Routes, filename: str) -> None:
+    """Export the graph to a KML file."""
+    kml_graph = simplekml.Kml()
+    kml_graph.newpoint(name="START", coords=[
+                       (groutes.start.lon, groutes.start.lat)])
 
-for edge in graph.edges():
-    start_node = graph.nodes[edge[0]]['pos']
-    end_node = graph.nodes[edge[1]]['pos']
-    distance = abs(end_node[0]-start_node[0]) + abs(end_node[1]-start_node[1])
-    graph.edges[edge]['weight'] = distance
+    for monument, segments in groutes.edges.items():
+        # Add the names
+        kml_graph.newpoint(
+            name=monument.name.split(".")[1],
+            coords=[(monument.location.lon, monument.location.lat)],
+        )
+        # Add the edges
+        for segment in segments:
+            start_point = (segment.start.lon, segment.start.lat)
+            end_point = (segment.end.lon, segment.end.lat)
+            lin = kml_graph.newlinestring(coords=[start_point, end_point])
+            lin.style.linestyle.color = simplekml.Color.red
+            lin.style.linestyle.width = 5
 
-
-print(find_routes(graph,Point(1,2),[Monument("hla",Point(3,2)),Monument("hla",Point(4,1))]))
-
+    kml_graph.save(filename)
