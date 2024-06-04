@@ -3,8 +3,8 @@ from dataclasses import dataclass
 from requests import get
 from gpxpy import parse
 from pickle import dump, load
-from haversine import haversine  # type: ignore
-from staticmap import StaticMap, Line  # type: ignore
+from haversine import haversine
+from staticmap import StaticMap, Line
 
 
 @dataclass
@@ -30,15 +30,15 @@ Segments: TypeAlias = list[Segment]
 
 # The type of p1 and p2 depends on the result of the openstreetmap API.
 # We left it with type any to avoid future type conflicts in case of API changes.
-def filter_segment(p1: any, p2: any) -> bool:  # type: ignore
+def filter_segment(p1: any, p2: any) -> bool:
     """Validate a segment based on time and distance."""
 
     max_distance = 500.0  # meters
     max_time = 15  # seconds
     time_epsilon = 0.000001  # seconds
 
-    dist = haversine((p1.latitude, p1.longitude), (p2.latitude, p2.longitude))  # type: ignore
-    time_delta = (p2.time - p1.time).total_seconds()  # type: ignore
+    dist = haversine((p1.latitude, p1.longitude), (p2.latitude, p2.longitude))
+    time_delta = (p2.time - p1.time).total_seconds()
 
     # The time difference between two points is more than the maximum allowed time
     if time_delta > max_time:
@@ -141,7 +141,7 @@ def show_segments(segments: Segments, filename: str) -> None:
             "blue",
             3,
         )
-        map.add_line(line)  # type: ignore
+        map.add_line(line)
 
-    image = map.render()  # type: ignore
-    image.save(filename)  # type: ignore
+    image = map.render()
+    image.save(filename)

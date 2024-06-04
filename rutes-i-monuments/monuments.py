@@ -5,24 +5,13 @@ from requests import get
 from requests.exceptions import ConnectionError, Timeout, ReadTimeout
 from re import findall
 from pickle import dump, load
-
-
-@dataclass
-class Point:
-    lat: float
-    lon: float
+from segments import Point, Box
 
 
 @dataclass
 class Monument:
     name: str
     location: Point
-
-
-@dataclass
-class Box:
-    bottom_left: Point
-    top_right: Point
 
 
 Monuments: TypeAlias = list[Monument]
@@ -79,7 +68,7 @@ def scrape_monument(url: str) -> Optional[Monument]:
     soup = BeautifulSoup(response.content, "html.parser")
 
     # Find the title of the monument
-    title = soup.find("h1", class_="entry-title").text # type: ignore
+    title = soup.find("h1", class_="entry-title").text  # type: ignore
 
     # Find the coordinates of the monument
     location_elements = soup.find_all("p")

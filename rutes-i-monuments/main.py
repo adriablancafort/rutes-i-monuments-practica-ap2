@@ -61,4 +61,5 @@ routes = find_routes(graph, start, monuments_filtrats)
 
 print(f"Creating optimal routes from {start} to monuments inside {zone_name}...")
 routes_PNG(routes, f"rutes_{zone_name}.png")
-print(f"Optimal routes from {start} to monuments inside {zone_name} saved to rutes.png")
+routes_KML(routes, f"rutes_{zone_name}.kml")
+print(f"Optimal routes from {start} to monuments inside {zone_name} saved to rutes_{zone_name}.png and rutes_{zone_name}.kml")
