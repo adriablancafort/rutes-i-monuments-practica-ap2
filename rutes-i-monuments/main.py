@@ -20,8 +20,17 @@ monuments_filtrats = filter_monuments(get_monuments("monuments.dat"), BOX_EBRE)
 
 from graphmaker import make_graph, simplify_graph
 
-graph = make_graph(get_segments(BOX_EBRE, "ebre_filtrat.dat"), 160)
-#graph_simplificat = simplify_graph(graph, 5)
+# graph = make_graph(get_segments(BOX_EBRE, "ebre_filtrat.dat"), 160)
+# graph_simplificat = simplify_graph(graph, 5)
+
+import pickle
+
+#with open('graph.pkl', 'wb') as f:
+#    pickle.dump(graph, f)
+
+
+with open('graph.pkl', 'rb') as f:
+    graph = pickle.load(f)
 
 """
 # Viewer
@@ -39,7 +48,7 @@ export_KML(graph_simplificat, "ebre_graph_simplificat_filtrat.kml")
 
 # Routes
 
-from rutes_biel import find_routes, routes_PNG, routes_KML
+from routes import find_routes, routes_PNG, routes_KML
 
 start = Point(lat=40.6683333, lon=0.5872222)
 
@@ -50,6 +59,5 @@ routes_PNG(routes, "rutes.png")
 
 # Per fer:
 
-# comprovar el routes 
 # interfaç del main.py
 # readme
