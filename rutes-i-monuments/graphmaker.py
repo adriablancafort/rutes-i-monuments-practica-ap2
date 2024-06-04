@@ -36,7 +36,7 @@ def make_graph(segments: Segments, clusters: int) -> nx.Graph:
         start_cluster = tree.query([segment.start.lat, segment.start.lon])[1]
         end_cluster = tree.query([segment.end.lat, segment.end.lon])[1]
         if start_cluster != end_cluster:
-                G.add_edge(start_cluster, end_cluster,color="black")
+            G.add_edge(start_cluster, end_cluster, color="black")
 
     return G
 

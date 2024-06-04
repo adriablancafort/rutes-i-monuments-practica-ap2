@@ -79,7 +79,7 @@ def scrape_monument(url: str) -> Optional[Monument]:
     soup = BeautifulSoup(response.content, "html.parser")
 
     # Find the title of the monument
-    title = soup.find("h1", class_="entry-title").text
+    title = soup.find("h1", class_="entry-title").text # type: ignore
 
     # Find the coordinates of the monument
     location_elements = soup.find_all("p")

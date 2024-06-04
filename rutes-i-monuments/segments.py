@@ -3,8 +3,8 @@ from dataclasses import dataclass
 from requests import get
 from gpxpy import parse
 from pickle import dump, load
-from staticmap import StaticMap, Line
-from haversine import haversine
+from haversine import haversine  # type: ignore
+from staticmap import StaticMap, Line  # type: ignore
 
 
 @dataclass
@@ -26,19 +26,34 @@ class Box:
 
 
 Segments: TypeAlias = list[Segment]
-def validator(p1:any, p2:any)->bool:
-    max_delta:float = 500
-    epsilon: float = 0.000001
-    dist:float = haversine((p1.latitude, p1.longitude),(p2.latitude, p2.longitude))
-    delta = p2.time - p1.time
-    time_delta:float = delta.total_seconds()
-    if(time_delta> 15):
+
+
+# The type of p1 and p2 depends on the result of the openstreetmap API.
+# We left it with type any to avoid future type conflicts in case of API changes.
+def filter_segment(p1: any, p2: any) -> bool:  # type: ignore
+    """Validate a segment based on time and distance."""
+
+    max_distance = 500.0  # meters
+    max_time = 15  # seconds
+    time_epsilon = 0.000001  # seconds
+
+    dist = haversine((p1.latitude, p1.longitude), (p2.latitude, p2.longitude))  # type: ignore
+    time_delta = (p2.time - p1.time).total_seconds()  # type: ignore
+
+    # The time difference between two points is more than the maximum allowed time
+    if time_delta > max_time:
         return False
-    if(dist >max_delta):
+
+    # The distance between two points is more than the maximum allowed distance
+    if dist > max_distance:
         return False
-    if(time_delta< epsilon):
+
+    # The time difference between two points is effectively zero (less than a very small number)
+    if time_delta < time_epsilon:
         return False
+
     return True
+
 
 def download_segments(box: Box) -> Segments:
     """Download all segments in the box."""
@@ -47,8 +62,8 @@ def download_segments(box: Box) -> Segments:
 
     BOX = f"{box.bottom_left.lat},{box.bottom_left.lon},{box.top_right.lat},{box.top_right.lon}"
     page = 0
+
     while True:
-        print("hola")
         url = (
             f"https://api.openstreetmap.org/api/0.6/trackpoints?bbox={BOX}&page={page}"
         )
@@ -66,17 +81,13 @@ def download_segments(box: Box) -> Segments:
                     for i in range(len(segment.points) - 1):
                         # Add segments of consecutive points
                         p1, p2 = segment.points[i], segment.points[i + 1]
-                        ##eliminate if it does not do correct stuff
-                        if(validator(p1,p2)):
+                        if filter_segment(p1, p2):
                             segments.append(
                                 Segment(
                                     Point(p1.latitude, p1.longitude),
                                     Point(p2.latitude, p2.longitude),
-
                                 )
                             )
-                        else:
-                            print("rejected")
         page += 1
 
     return segments
@@ -117,6 +128,7 @@ def get_segments(box: Box, filename: str) -> Segments:
 
 def show_segments(segments: Segments, filename: str) -> None:
     """Show all segments in a PNG file using staticmap."""
+
     map = StaticMap(800, 800)
 
     for segment in segments:
@@ -129,10 +141,7 @@ def show_segments(segments: Segments, filename: str) -> None:
             "blue",
             3,
         )
-        map.add_line(line)
+        map.add_line(line)  # type: ignore
 
-    image = map.render()
-    image.save(filename)
-
-
-#print(get_segments(Box(Point(0.5739316671, 40.5363713), Point(0.9021482, 40.79886535)), "../ebre_filtrat.dat"))
+    image = map.render()  # type: ignore
+    image.save(filename)  # type: ignore
