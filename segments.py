@@ -12,6 +12,9 @@ class Point:
     lat: float
     lon: float
 
+    def __hash__(self):
+        return hash((self.lon, self.lat))
+
 
 @dataclass
 class Segment:

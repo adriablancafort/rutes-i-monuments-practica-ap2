@@ -1,0 +1,1492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="1">
+        <Style id="8">
+            <LineStyle id="9">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="12">
+            <LineStyle id="13">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="16">
+            <LineStyle id="17">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="20">
+            <LineStyle id="21">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="24">
+            <LineStyle id="25">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="28">
+            <LineStyle id="29">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="32">
+            <LineStyle id="33">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="38">
+            <LineStyle id="39">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="42">
+            <LineStyle id="43">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="46">
+            <LineStyle id="47">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="50">
+            <LineStyle id="51">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="54">
+            <LineStyle id="55">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="58">
+            <LineStyle id="59">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="62">
+            <LineStyle id="63">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="66">
+            <LineStyle id="67">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="70">
+            <LineStyle id="71">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="74">
+            <LineStyle id="75">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="78">
+            <LineStyle id="79">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="82">
+            <LineStyle id="83">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="86">
+            <LineStyle id="87">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="92">
+            <LineStyle id="93">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="96">
+            <LineStyle id="97">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="102">
+            <LineStyle id="103">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="106">
+            <LineStyle id="107">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="110">
+            <LineStyle id="111">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="116">
+            <LineStyle id="117">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="120">
+            <LineStyle id="121">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="124">
+            <LineStyle id="125">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="128">
+            <LineStyle id="129">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="132">
+            <LineStyle id="133">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="136">
+            <LineStyle id="137">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="140">
+            <LineStyle id="141">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="144">
+            <LineStyle id="145">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="148">
+            <LineStyle id="149">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="152">
+            <LineStyle id="153">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="156">
+            <LineStyle id="157">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="160">
+            <LineStyle id="161">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="166">
+            <LineStyle id="167">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="172">
+            <LineStyle id="173">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="178">
+            <LineStyle id="179">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="184">
+            <LineStyle id="185">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="188">
+            <LineStyle id="189">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="192">
+            <LineStyle id="193">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="196">
+            <LineStyle id="197">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="200">
+            <LineStyle id="201">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="206">
+            <LineStyle id="207">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="210">
+            <LineStyle id="211">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="214">
+            <LineStyle id="215">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="218">
+            <LineStyle id="219">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="222">
+            <LineStyle id="223">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="226">
+            <LineStyle id="227">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="230">
+            <LineStyle id="231">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="234">
+            <LineStyle id="235">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="240">
+            <LineStyle id="241">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="244">
+            <LineStyle id="245">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="248">
+            <LineStyle id="249">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="252">
+            <LineStyle id="253">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="256">
+            <LineStyle id="257">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="260">
+            <LineStyle id="261">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="264">
+            <LineStyle id="265">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="268">
+            <LineStyle id="269">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="272">
+            <LineStyle id="273">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="276">
+            <LineStyle id="277">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="280">
+            <LineStyle id="281">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="286">
+            <LineStyle id="287">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="290">
+            <LineStyle id="291">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="294">
+            <LineStyle id="295">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="298">
+            <LineStyle id="299">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="302">
+            <LineStyle id="303">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="306">
+            <LineStyle id="307">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="310">
+            <LineStyle id="311">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="314">
+            <LineStyle id="315">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="318">
+            <LineStyle id="319">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="322">
+            <LineStyle id="323">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="326">
+            <LineStyle id="327">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="330">
+            <LineStyle id="331">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="334">
+            <LineStyle id="335">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="340">
+            <LineStyle id="341">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="344">
+            <LineStyle id="345">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="348">
+            <LineStyle id="349">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="352">
+            <LineStyle id="353">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="356">
+            <LineStyle id="357">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="360">
+            <LineStyle id="361">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="364">
+            <LineStyle id="365">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="368">
+            <LineStyle id="369">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="374">
+            <LineStyle id="375">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="378">
+            <LineStyle id="379">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="382">
+            <LineStyle id="383">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="386">
+            <LineStyle id="387">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="390">
+            <LineStyle id="391">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="394">
+            <LineStyle id="395">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="398">
+            <LineStyle id="399">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="402">
+            <LineStyle id="403">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="406">
+            <LineStyle id="407">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="410">
+            <LineStyle id="411">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="414">
+            <LineStyle id="415">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="418">
+            <LineStyle id="419">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="422">
+            <LineStyle id="423">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="426">
+            <LineStyle id="427">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="432">
+            <LineStyle id="433">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="436">
+            <LineStyle id="437">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="440">
+            <LineStyle id="441">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="444">
+            <LineStyle id="445">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="448">
+            <LineStyle id="449">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="452">
+            <LineStyle id="453">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="456">
+            <LineStyle id="457">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Style id="460">
+            <LineStyle id="461">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <width>5</width>
+            </LineStyle>
+        </Style>
+        <Placemark id="3">
+            <name>START</name>
+            <Point id="2">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="5">
+            <name>Torre de la Llotja – Tortosa / Baix Ebre</name>
+            <Point id="4">
+                <coordinates>0.5770556,40.7399444,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="7">
+            <styleUrl>#8</styleUrl>
+            <LineString id="6">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5846922862513821,40.68121665340951,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="11">
+            <styleUrl>#12</styleUrl>
+            <LineString id="10">
+                <coordinates>0.5846922862513821,40.68121665340951,0.0 0.577281959894806,40.686211613379356,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="15">
+            <styleUrl>#16</styleUrl>
+            <LineString id="14">
+                <coordinates>0.577281959894806,40.686211613379356,0.0 0.5788131052832106,40.69738975801371,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="19">
+            <styleUrl>#20</styleUrl>
+            <LineString id="18">
+                <coordinates>0.5788131052832106,40.69738975801371,0.0 0.5777145564704632,40.703973749745,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="23">
+            <styleUrl>#24</styleUrl>
+            <LineString id="22">
+                <coordinates>0.5777145564704632,40.703973749745,0.0 0.5767619390303882,40.71163008422624,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="27">
+            <styleUrl>#28</styleUrl>
+            <LineString id="26">
+                <coordinates>0.5767619390303882,40.71163008422624,0.0 0.5773306648160245,40.729552469823645,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="31">
+            <styleUrl>#32</styleUrl>
+            <LineString id="30">
+                <coordinates>0.5773306648160245,40.729552469823645,0.0 0.5780628389235569,40.738904064352575,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="35">
+            <name>Parc Natural del Delta de l’Ebre – Deltebre / Baix Ebre</name>
+            <Point id="34">
+                <coordinates>0.7171389,40.6460278,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="37">
+            <styleUrl>#38</styleUrl>
+            <LineString id="36">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5933635511760244,40.67194062344461,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="41">
+            <styleUrl>#42</styleUrl>
+            <LineString id="40">
+                <coordinates>0.5933635511760244,40.67194062344461,0.0 0.599338987363305,40.68377684957473,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="45">
+            <styleUrl>#46</styleUrl>
+            <LineString id="44">
+                <coordinates>0.599338987363305,40.68377684957473,0.0 0.6139155242244684,40.67885455785988,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="49">
+            <styleUrl>#50</styleUrl>
+            <LineString id="48">
+                <coordinates>0.6139155242244684,40.67885455785988,0.0 0.622054244712991,40.67866966364552,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="53">
+            <styleUrl>#54</styleUrl>
+            <LineString id="52">
+                <coordinates>0.622054244712991,40.67866966364552,0.0 0.6348888677098151,40.66836092176387,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="57">
+            <styleUrl>#58</styleUrl>
+            <LineString id="56">
+                <coordinates>0.6348888677098151,40.66836092176387,0.0 0.6481615176322418,40.66909951133501,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="61">
+            <styleUrl>#62</styleUrl>
+            <LineString id="60">
+                <coordinates>0.6481615176322418,40.66909951133501,0.0 0.6619401864501679,40.66261412653975,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="65">
+            <styleUrl>#66</styleUrl>
+            <LineString id="64">
+                <coordinates>0.6619401864501679,40.66261412653975,0.0 0.672804885475793,40.659515641068445,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="69">
+            <styleUrl>#70</styleUrl>
+            <LineString id="68">
+                <coordinates>0.672804885475793,40.659515641068445,0.0 0.6822308694891532,40.657070606018195,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="73">
+            <styleUrl>#74</styleUrl>
+            <LineString id="72">
+                <coordinates>0.6822308694891532,40.657070606018195,0.0 0.6888548537981991,40.64858786347264,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="77">
+            <styleUrl>#78</styleUrl>
+            <LineString id="76">
+                <coordinates>0.6888548537981991,40.64858786347264,0.0 0.6998414483537767,40.65438119690123,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="81">
+            <styleUrl>#82</styleUrl>
+            <LineString id="80">
+                <coordinates>0.6998414483537767,40.65438119690123,0.0 0.7066462758362323,40.6503146046829,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="85">
+            <styleUrl>#86</styleUrl>
+            <LineString id="84">
+                <coordinates>0.7066462758362323,40.6503146046829,0.0 0.7245456133333332,40.652823397333336,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="89">
+            <name>Torre de la Guardiola – Sant Carles de la Ràpita / Montsià</name>
+            <Point id="88">
+                <coordinates>0.5858889,40.6235833,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="91">
+            <styleUrl>#92</styleUrl>
+            <LineString id="90">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5951009282255151,40.64385044644019,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="95">
+            <styleUrl>#96</styleUrl>
+            <LineString id="94">
+                <coordinates>0.5951009282255151,40.64385044644019,0.0 0.5854433382444567,40.62554946366135,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="99">
+            <name>Torre del moro I – Sant Carles de la Ràpita / Montsià</name>
+            <Point id="98">
+                <coordinates>0.5748333,40.6168917,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="101">
+            <styleUrl>#102</styleUrl>
+            <LineString id="100">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5951009282255151,40.64385044644019,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="105">
+            <styleUrl>#106</styleUrl>
+            <LineString id="104">
+                <coordinates>0.5951009282255151,40.64385044644019,0.0 0.5953891079751883,40.621116058174565,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="109">
+            <styleUrl>#110</styleUrl>
+            <LineString id="108">
+                <coordinates>0.5953891079751883,40.621116058174565,0.0 0.5795657267875126,40.60759950538771,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="113">
+            <name>Torre de Sant Joan – Amposta / Montsià</name>
+            <Point id="112">
+                <coordinates>0.707475,40.6352639,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="115">
+            <styleUrl>#116</styleUrl>
+            <LineString id="114">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5933635511760244,40.67194062344461,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="119">
+            <styleUrl>#120</styleUrl>
+            <LineString id="118">
+                <coordinates>0.5933635511760244,40.67194062344461,0.0 0.599338987363305,40.68377684957473,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="123">
+            <styleUrl>#124</styleUrl>
+            <LineString id="122">
+                <coordinates>0.599338987363305,40.68377684957473,0.0 0.6139155242244684,40.67885455785988,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="127">
+            <styleUrl>#128</styleUrl>
+            <LineString id="126">
+                <coordinates>0.6139155242244684,40.67885455785988,0.0 0.622054244712991,40.67866966364552,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="131">
+            <styleUrl>#132</styleUrl>
+            <LineString id="130">
+                <coordinates>0.622054244712991,40.67866966364552,0.0 0.6348888677098151,40.66836092176387,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="135">
+            <styleUrl>#136</styleUrl>
+            <LineString id="134">
+                <coordinates>0.6348888677098151,40.66836092176387,0.0 0.6481615176322418,40.66909951133501,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="139">
+            <styleUrl>#140</styleUrl>
+            <LineString id="138">
+                <coordinates>0.6481615176322418,40.66909951133501,0.0 0.6619401864501679,40.66261412653975,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="143">
+            <styleUrl>#144</styleUrl>
+            <LineString id="142">
+                <coordinates>0.6619401864501679,40.66261412653975,0.0 0.672804885475793,40.659515641068445,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="147">
+            <styleUrl>#148</styleUrl>
+            <LineString id="146">
+                <coordinates>0.672804885475793,40.659515641068445,0.0 0.6822308694891532,40.657070606018195,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="151">
+            <styleUrl>#152</styleUrl>
+            <LineString id="150">
+                <coordinates>0.6822308694891532,40.657070606018195,0.0 0.6888548537981991,40.64858786347264,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="155">
+            <styleUrl>#156</styleUrl>
+            <LineString id="154">
+                <coordinates>0.6888548537981991,40.64858786347264,0.0 0.6995305339906104,40.64248560328638,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="159">
+            <styleUrl>#160</styleUrl>
+            <LineString id="158">
+                <coordinates>0.6995305339906104,40.64248560328638,0.0 0.7083468415637859,40.63953047613169,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="163">
+            <name>Torre de Poquessalses – Amposta / Montsià</name>
+            <Point id="162">
+                <coordinates>0.5786389,40.6740083,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="165">
+            <styleUrl>#166</styleUrl>
+            <LineString id="164">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5846922862513821,40.68121665340951,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="169">
+            <name>Torre de l’Oriola – Amposta / Montsià</name>
+            <Point id="168">
+                <coordinates>0.5888556,40.6740139,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="171">
+            <styleUrl>#172</styleUrl>
+            <LineString id="170">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5933635511760244,40.67194062344461,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="175">
+            <name>Torre de Forcheron – Amposta / Montsià</name>
+            <Point id="174">
+                <coordinates>0.5872222,40.6683333,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="177">
+            <styleUrl>#178</styleUrl>
+            <LineString id="176">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5845411457342085,40.66400603289581,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="181">
+            <name>Castell d’Amposta / Montsià</name>
+            <Point id="180">
+                <coordinates>0.5801139,40.714375,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="183">
+            <styleUrl>#184</styleUrl>
+            <LineString id="182">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5846922862513821,40.68121665340951,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="187">
+            <styleUrl>#188</styleUrl>
+            <LineString id="186">
+                <coordinates>0.5846922862513821,40.68121665340951,0.0 0.577281959894806,40.686211613379356,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="191">
+            <styleUrl>#192</styleUrl>
+            <LineString id="190">
+                <coordinates>0.577281959894806,40.686211613379356,0.0 0.5788131052832106,40.69738975801371,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="195">
+            <styleUrl>#196</styleUrl>
+            <LineString id="194">
+                <coordinates>0.5788131052832106,40.69738975801371,0.0 0.5777145564704632,40.703973749745,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="199">
+            <styleUrl>#200</styleUrl>
+            <LineString id="198">
+                <coordinates>0.5777145564704632,40.703973749745,0.0 0.5809022120740678,40.71206199047096,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="203">
+            <name>Torre de l’ermita de la mare de Déu – L’Aldea / Baix Ebre</name>
+            <Point id="202">
+                <coordinates>0.6280556,40.7316667,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="205">
+            <styleUrl>#206</styleUrl>
+            <LineString id="204">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5933635511760244,40.67194062344461,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="209">
+            <styleUrl>#210</styleUrl>
+            <LineString id="208">
+                <coordinates>0.5933635511760244,40.67194062344461,0.0 0.599338987363305,40.68377684957473,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="213">
+            <styleUrl>#214</styleUrl>
+            <LineString id="212">
+                <coordinates>0.599338987363305,40.68377684957473,0.0 0.6058817780149413,40.69579621237994,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="217">
+            <styleUrl>#218</styleUrl>
+            <LineString id="216">
+                <coordinates>0.6058817780149413,40.69579621237994,0.0 0.6106570787181083,40.70297346826385,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="221">
+            <styleUrl>#222</styleUrl>
+            <LineString id="220">
+                <coordinates>0.6106570787181083,40.70297346826385,0.0 0.6223527192723697,40.70436141740413,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="225">
+            <styleUrl>#226</styleUrl>
+            <LineString id="224">
+                <coordinates>0.6223527192723697,40.70436141740413,0.0 0.6322360918767507,40.7088347859944,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="229">
+            <styleUrl>#230</styleUrl>
+            <LineString id="228">
+                <coordinates>0.6322360918767507,40.7088347859944,0.0 0.6378853159123056,40.7175802911834,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="233">
+            <styleUrl>#234</styleUrl>
+            <LineString id="232">
+                <coordinates>0.6378853159123056,40.7175802911834,0.0 0.6357222103448276,40.729428416666664,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="237">
+            <name>Torre de Granadella – Camarles / Baix Ebre</name>
+            <Point id="236">
+                <coordinates>0.6625,40.7675,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="239">
+            <styleUrl>#240</styleUrl>
+            <LineString id="238">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5933635511760244,40.67194062344461,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="243">
+            <styleUrl>#244</styleUrl>
+            <LineString id="242">
+                <coordinates>0.5933635511760244,40.67194062344461,0.0 0.599338987363305,40.68377684957473,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="247">
+            <styleUrl>#248</styleUrl>
+            <LineString id="246">
+                <coordinates>0.599338987363305,40.68377684957473,0.0 0.6058817780149413,40.69579621237994,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="251">
+            <styleUrl>#252</styleUrl>
+            <LineString id="250">
+                <coordinates>0.6058817780149413,40.69579621237994,0.0 0.6106570787181083,40.70297346826385,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="255">
+            <styleUrl>#256</styleUrl>
+            <LineString id="254">
+                <coordinates>0.6106570787181083,40.70297346826385,0.0 0.6223527192723697,40.70436141740413,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="259">
+            <styleUrl>#260</styleUrl>
+            <LineString id="258">
+                <coordinates>0.6223527192723697,40.70436141740413,0.0 0.6322360918767507,40.7088347859944,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="263">
+            <styleUrl>#264</styleUrl>
+            <LineString id="262">
+                <coordinates>0.6322360918767507,40.7088347859944,0.0 0.6378853159123056,40.7175802911834,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="267">
+            <styleUrl>#268</styleUrl>
+            <LineString id="266">
+                <coordinates>0.6378853159123056,40.7175802911834,0.0 0.6357222103448276,40.729428416666664,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="271">
+            <styleUrl>#272</styleUrl>
+            <LineString id="270">
+                <coordinates>0.6357222103448276,40.729428416666664,0.0 0.6510454610655738,40.74132091598361,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="275">
+            <styleUrl>#276</styleUrl>
+            <LineString id="274">
+                <coordinates>0.6510454610655738,40.74132091598361,0.0 0.6691397521367521,40.749417134188036,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="279">
+            <styleUrl>#280</styleUrl>
+            <LineString id="278">
+                <coordinates>0.6691397521367521,40.749417134188036,0.0 0.6583955161572053,40.76166011026201,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="283">
+            <name>Torre de Camarles / Baix Ebre</name>
+            <Point id="282">
+                <coordinates>0.6738889,40.7769444,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="285">
+            <styleUrl>#286</styleUrl>
+            <LineString id="284">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5846922862513821,40.68121665340951,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="289">
+            <styleUrl>#290</styleUrl>
+            <LineString id="288">
+                <coordinates>0.5846922862513821,40.68121665340951,0.0 0.577281959894806,40.686211613379356,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="293">
+            <styleUrl>#294</styleUrl>
+            <LineString id="292">
+                <coordinates>0.577281959894806,40.686211613379356,0.0 0.5788131052832106,40.69738975801371,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="297">
+            <styleUrl>#298</styleUrl>
+            <LineString id="296">
+                <coordinates>0.5788131052832106,40.69738975801371,0.0 0.5845799412483745,40.70378572542263,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="301">
+            <styleUrl>#302</styleUrl>
+            <LineString id="300">
+                <coordinates>0.5845799412483745,40.70378572542263,0.0 0.5882153201915157,40.70767258883855,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="305">
+            <styleUrl>#306</styleUrl>
+            <LineString id="304">
+                <coordinates>0.5882153201915157,40.70767258883855,0.0 0.5936499988604521,40.714787738016064,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="309">
+            <styleUrl>#310</styleUrl>
+            <LineString id="308">
+                <coordinates>0.5936499988604521,40.714787738016064,0.0 0.6011749588299025,40.72234018109426,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="313">
+            <styleUrl>#314</styleUrl>
+            <LineString id="312">
+                <coordinates>0.6011749588299025,40.72234018109426,0.0 0.6018657528806584,40.73453405665295,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="317">
+            <styleUrl>#318</styleUrl>
+            <LineString id="316">
+                <coordinates>0.6018657528806584,40.73453405665295,0.0 0.6119693528902871,40.7397772316162,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="321">
+            <styleUrl>#322</styleUrl>
+            <LineString id="320">
+                <coordinates>0.6119693528902871,40.7397772316162,0.0 0.6233519607929515,40.74843140052062,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="325">
+            <styleUrl>#326</styleUrl>
+            <LineString id="324">
+                <coordinates>0.6233519607929515,40.74843140052062,0.0 0.6421823957701517,40.762033127214686,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="329">
+            <styleUrl>#330</styleUrl>
+            <LineString id="328">
+                <coordinates>0.6421823957701517,40.762033127214686,0.0 0.658175455006502,40.77503126215865,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="333">
+            <styleUrl>#334</styleUrl>
+            <LineString id="332">
+                <coordinates>0.658175455006502,40.77503126215865,0.0 0.6701016938547486,40.77816915988827,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="337">
+            <name>Torre de Burgasènia – L’Aldea / Baix Ebre</name>
+            <Point id="336">
+                <coordinates>0.5955556,40.7327778,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="339">
+            <styleUrl>#340</styleUrl>
+            <LineString id="338">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5846922862513821,40.68121665340951,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="343">
+            <styleUrl>#344</styleUrl>
+            <LineString id="342">
+                <coordinates>0.5846922862513821,40.68121665340951,0.0 0.577281959894806,40.686211613379356,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="347">
+            <styleUrl>#348</styleUrl>
+            <LineString id="346">
+                <coordinates>0.577281959894806,40.686211613379356,0.0 0.5788131052832106,40.69738975801371,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="351">
+            <styleUrl>#352</styleUrl>
+            <LineString id="350">
+                <coordinates>0.5788131052832106,40.69738975801371,0.0 0.5777145564704632,40.703973749745,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="355">
+            <styleUrl>#356</styleUrl>
+            <LineString id="354">
+                <coordinates>0.5777145564704632,40.703973749745,0.0 0.5809022120740678,40.71206199047096,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="359">
+            <styleUrl>#360</styleUrl>
+            <LineString id="358">
+                <coordinates>0.5809022120740678,40.71206199047096,0.0 0.5850854518909412,40.71806463234075,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="363">
+            <styleUrl>#364</styleUrl>
+            <LineString id="362">
+                <coordinates>0.5850854518909412,40.71806463234075,0.0 0.5910898350462738,40.72291679978081,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="367">
+            <styleUrl>#368</styleUrl>
+            <LineString id="366">
+                <coordinates>0.5910898350462738,40.72291679978081,0.0 0.5902785775463446,40.730469481732975,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="371">
+            <name>Torre de Benixarop – L’Aldea / Baix Ebre</name>
+            <Point id="370">
+                <coordinates>0.6147222,40.7905556,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="373">
+            <styleUrl>#374</styleUrl>
+            <LineString id="372">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5846922862513821,40.68121665340951,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="377">
+            <styleUrl>#378</styleUrl>
+            <LineString id="376">
+                <coordinates>0.5846922862513821,40.68121665340951,0.0 0.577281959894806,40.686211613379356,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="381">
+            <styleUrl>#382</styleUrl>
+            <LineString id="380">
+                <coordinates>0.577281959894806,40.686211613379356,0.0 0.5788131052832106,40.69738975801371,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="385">
+            <styleUrl>#386</styleUrl>
+            <LineString id="384">
+                <coordinates>0.5788131052832106,40.69738975801371,0.0 0.5777145564704632,40.703973749745,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="389">
+            <styleUrl>#390</styleUrl>
+            <LineString id="388">
+                <coordinates>0.5777145564704632,40.703973749745,0.0 0.5809022120740678,40.71206199047096,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="393">
+            <styleUrl>#394</styleUrl>
+            <LineString id="392">
+                <coordinates>0.5809022120740678,40.71206199047096,0.0 0.5850854518909412,40.71806463234075,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="397">
+            <styleUrl>#398</styleUrl>
+            <LineString id="396">
+                <coordinates>0.5850854518909412,40.71806463234075,0.0 0.5910898350462738,40.72291679978081,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="401">
+            <styleUrl>#402</styleUrl>
+            <LineString id="400">
+                <coordinates>0.5910898350462738,40.72291679978081,0.0 0.5902785775463446,40.730469481732975,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="405">
+            <styleUrl>#406</styleUrl>
+            <LineString id="404">
+                <coordinates>0.5902785775463446,40.730469481732975,0.0 0.5889042082538447,40.73940895279346,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="409">
+            <styleUrl>#410</styleUrl>
+            <LineString id="408">
+                <coordinates>0.5889042082538447,40.73940895279346,0.0 0.587520169921875,40.74778933984375,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="413">
+            <styleUrl>#414</styleUrl>
+            <LineString id="412">
+                <coordinates>0.587520169921875,40.74778933984375,0.0 0.5907499415745245,40.75646620035383,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="417">
+            <styleUrl>#418</styleUrl>
+            <LineString id="416">
+                <coordinates>0.5907499415745245,40.75646620035383,0.0 0.5933964710935024,40.771448417876385,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="421">
+            <styleUrl>#422</styleUrl>
+            <LineString id="420">
+                <coordinates>0.5933964710935024,40.771448417876385,0.0 0.6044293879539415,40.78043280070859,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="425">
+            <styleUrl>#426</styleUrl>
+            <LineString id="424">
+                <coordinates>0.6044293879539415,40.78043280070859,0.0 0.6115484249909847,40.79096931121529,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="429">
+            <name>Torre de Campredó – Tortosa / Baix Ebre</name>
+            <Point id="428">
+                <coordinates>0.5794444,40.7461111,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="431">
+            <styleUrl>#432</styleUrl>
+            <LineString id="430">
+                <coordinates>0.5845411457342085,40.66400603289581,0.0 0.5846922862513821,40.68121665340951,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="435">
+            <styleUrl>#436</styleUrl>
+            <LineString id="434">
+                <coordinates>0.5846922862513821,40.68121665340951,0.0 0.577281959894806,40.686211613379356,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="439">
+            <styleUrl>#440</styleUrl>
+            <LineString id="438">
+                <coordinates>0.577281959894806,40.686211613379356,0.0 0.5788131052832106,40.69738975801371,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="443">
+            <styleUrl>#444</styleUrl>
+            <LineString id="442">
+                <coordinates>0.5788131052832106,40.69738975801371,0.0 0.5777145564704632,40.703973749745,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="447">
+            <styleUrl>#448</styleUrl>
+            <LineString id="446">
+                <coordinates>0.5777145564704632,40.703973749745,0.0 0.5767619390303882,40.71163008422624,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="451">
+            <styleUrl>#452</styleUrl>
+            <LineString id="450">
+                <coordinates>0.5767619390303882,40.71163008422624,0.0 0.5773306648160245,40.729552469823645,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="455">
+            <styleUrl>#456</styleUrl>
+            <LineString id="454">
+                <coordinates>0.5773306648160245,40.729552469823645,0.0 0.5780628389235569,40.738904064352575,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="459">
+            <styleUrl>#460</styleUrl>
+            <LineString id="458">
+                <coordinates>0.5780628389235569,40.738904064352575,0.0 0.5782710340594059,40.75085144871287,0.0</coordinates>
+            </LineString>
+        </Placemark>
+    </Document>
+</kml>

@@ -13,6 +13,9 @@ class Monument:
     name: str
     location: Point
 
+    def __hash__(self):
+        return hash((self.name, self.location))
+
 
 Monuments: TypeAlias = list[Monument]
 
